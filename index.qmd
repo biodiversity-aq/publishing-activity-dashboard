@@ -7,6 +7,8 @@ execute:
   echo: false
 ---
 
+*Last updated on `r format(Sys.time(), "%Y-%m-%d %H:%M %Z")`*
+
 ```{r setup, include = FALSE}
 library(tidyverse)
 library(plotly)
