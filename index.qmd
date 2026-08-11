@@ -27,11 +27,14 @@ data <- read_tsv(datasets)
 
 # add created and modified date to each dataset
 datasets <- data %>%
-  mutate(api_data = map(dataset_key, get_created_modified)) %>%
-  unnest(api_data) %>%
+  rename(export_modified = modified) %>%
   mutate(
-    created_date = as_date(created),
-    created_year = year(created_date),
+    api_data = map(dataset_key, get_created_modified)
+  ) %>%
+  unnest(api_data, keep_empty = TRUE) %>%
+  mutate(
+    created_date  = as_date(created),
+    created_year  = year(created_date),
     modified_date = as_date(modified),
     modified_year = year(modified_date)
   )
