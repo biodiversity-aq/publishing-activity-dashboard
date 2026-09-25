@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1017432811.svg)](https://doi.org/10.5281/zenodo.22939328)
+
 ## SCAR Antarctic Biodiversity Portal Activity Dashboard
 
 This Quarto dashboard visualizes dataset publication activity by the SCAR Antarctic Biodiversity Portal using data retrieved from the GBIF API.
